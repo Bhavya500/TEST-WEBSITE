@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>EVENT AND OVERVIEW | SD PROMO MEDIA Pvt Ltd</title>
+        
+    </head>
+    
+    <body>
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="index.html" class="navigation__link"><span>01</span>Home</a></li>
+                    <li class="navigation__item"><a href="ABOUTUS.HTML" class="navigation__link"><span>02</span>About Us</a></li>
+                    <li class="navigation__item"><a href="Events.html" class="navigation__link"><span>03</span>Events</a></li>
+                    <li class="navigation__item"><a href="contactus.html" class="navigation__link"><span>04</span>Contact Us</a></li>
+                   
+                </ul>
+            </nav>
+        </div>
+
+        <header class="header">
+            <div class="header__logo-box">
+                <img src="img/logo-white.png" alt="Logo" class="header__logo">
+            </div>
+
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">Events</span>
+                    <span class="heading-primary--sub">Events and Overview</span>
+                </h1>
+
+                <a href="#section-tours" class="btn btn--white btn--animated">Discover our Expo</a>
+            </div>
+        </header>
+        
+        
+        
+    <main> 
+            
+         <div class="containerEvent">
+            
+                     <div class="sidebarEvent">
+                       
+
+                         </div>
+
+                     
+          
+                     <header class="headerEvent" > 
+
+                        <h3 class=" u-margin-bottom-small">.</h3>
+                        <h3 class="heading-secondaryEvent u-margin-bottom-small">Your event</h3>
+                        <h1 class="heading-tertiaryEvent u-margin-bottom-small">Our responsiblity</h1>
+                        <div class="headerEvent__seenon-text">Filter By  year</div>
+                        <div class="headerEvent__seenon-logo" id="myBtnContainer">
+                            
+                            <button  class="btn-Evento" class="btn " onclick="filterSelection('all')">Show all </button>
+                            <button  class="btn-Evento"  class="btn" class="active" onclick="filterSelection('2020')">2020 </button>
+                            <button   class="btn-Evento" class="btn" onclick="filterSelection('2019')">2019 </button >
+                            <button   class="btn-Evento " class= "btn"  onclick="filterSelection('2018')">2018 </button >
+                            <button   class="btn-Evento " class= "btn"  onclick="filterSelection('2017')" >2017 </button >
+                            <button   class="btn-Evento " class= "btn"  onclick="filterSelection('2016')" >2016 </button >
+                            
+                        </div>
+
+                     </header>
+
+
+
+                     
+                     
+                     <div class="rEvent">
+
+                         <h3 class="heading-tertiary u-margin-bottom-small rEvent__heading"> UPCOMING EVENTS  2020</h3>
+                         <div class="rEvent__list">
+                             <img src="img/indiamedexpo.jpg" alt="" class="rEvent__imgg">
+                             <div class="rEvent__details">
+                                 <h4  >INDIA MED EXPO 2020 - CHENNAI</h4>
+                                 <p class="rEvent__date">24-26 April 2020</p>
+                             </div>
+                         </div>
+
+                         <div class="rEvent__list">
+                            <img src="img/iioo.jpg" alt="" class="rEvent__imgg">
+                            <div class="rEvent__details">
+                                <h4 >IIOO EXPO 2020</h4>
+                                <p class="rEvent__date">11-13 July 2020</p>
+                            </div>
+                        </div>
+
+                        <div class="rEvent__list">
+                            <img src="img/ophthalmology.jpg" alt="" class="rEvent__imgg">
+                            <div class="rEvent__details">
+                                <h4 >INDIA OPHTHALMOLOGY EXPO 2020</h4>
+                                <p class="rEvent__date">11-12 July 2020</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("feature");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+    
+
+            
+                     
+                     
+                     
+                     <div class="featureEvent">
+             
+            
+                               <div class="feature 2020">
+                                 <img src="img/indiamedexpo.jpg" alt="" class="feature__image" > 
+                                <br><h4 class="feature__heading "> INDIA MED EXPO 2020 - HYDERABAD <br> 4-6 January 2020 - Hitex - Hyderabad</p>   </h4>
+                                </div>
+                   
+                                <div class="feature 2020">
+                                   <img src="img/srilankalab.jpg" alt="" class="feature__image"> 
+                               <br> <h3 class="feature__heading">SRI LANKA LAB EXPO 2020 <br> 13-15 Feburary 2020-SLECC-Colombo </h3>
+                               </div>
+
+                               <div class="feature 2020">
+                                   <img src="img/indiamedexpo.jpg" alt="" class="feature__image"> 
+                               <br> <h3 class="feature__heading">INDIA MED EXPO 2020 - CHENNAI <br> 24-26 April 2020 - Chennai Trade Centre - Chennai </h3>
+                               </div>
+                                
+                               <div class="feature 2020">
+                                   <img src="img/iioo.jpg" alt="" class="feature__image"> 
+                               <br> <h3 class="feature__heading">IIOO EXPO 2020 <br> 11-13 July 2020-Chennai Trade Centre- Chennai </h3>
+                               </div>
+                            
+                               
+                               <div class="feature 2020">
+                                   <img src="img/ophthalmology.jpg" alt="" class="feature__image"> 
+                               <br> <h3 class="feature__heading">INDIA OPHTHALMOLOGY EXPO 2020 <br> 11-12 July 2020-Chennai Trade Centre- Chennai </h3>
+                               </div>
+                           
+                   
+                               <div class="feature 2020">
+                                   <img src="img/ophthall.jpg" alt="" class="feature__image 2019"> 
+                               <br> <h3 class="feature__heading">OPHTHALL 2020 <br> 11-12 July 2020-Chennai Trade Centre- Chennai </h3>
+                               </div> 
+                   
+                           
+                               <div class="feature 2020">
+                                   <img src="img/lab-bangladesh.jpg" alt="" class="feature__image"> 
+                               <br> <h3 class="feature__heading">LAB BANGLADESH 2020<br> 8-10 October 2020 - ICCB - Dhaka </h3>
+                               </div> 
+                               
+                   
+                               <div class="feature 2020">
+                                   <img src="img/banglamed.jpg" alt="" class="feature__image"> 
+                               <br> <h3 class="feature__heading">BANGLADESH MED 2020<br> 8-10 October 2020 - ICCB - Dhaka </h3>
+                               </div> 
+                   
+                              
+                               <div class="feature 2020">
+                            <img src="img/ettechx.jpg" alt="" class="feature__image"> 
+                               <br> <h3 class="feature__heading">ET TECH X EXPO 2020<br>1-3 December 2020 - India Expo Centre - Greater Noida -NCR </h3>
+                               </div>
+
+                                
+                               <div class="feature 2020">
+                                   <img src="img/indiamedexpo.jpg" alt="" class="feature__image"> 
+                               <br> <h3 class="feature__heading">INDIA MED EXPO 2020 - HYDERABAD<br>4-6 December 2020 - Hitex - Hyderabad </h3>
+                               </div>
+                   
+                               <div class="feature 2020">
+                                   <img src="img/nepallab.jpg" alt="" class="feature__image"> 
+                               <br> <h3 class="feature__heading">NEPAL LAB 2020<br> 18-20 December 2020 - Bhrikati Mandap - Kathmandu </h3>
+                               </div>
+                                
+                               <div class="feature 2020">
+                                   <img src="img/nepal-medical.jpg" alt="" class="feature__image"> 
+                               <br> <h3 class="feature__heading">NEPAL MEDICAL SHOW 2020<br> 18-20 December 2020 - Bhrikati Mandap - Kathmandu </h3>
+                               </div>
+
+
+                                                          <!-- 2019-->
+
+                              
+                                 <div class="feature 2019">
+                                   <img src="img/ims.jpg" alt="" class="feature__image"> 
+                               <br> <h3 class="feature__heading">INDIA MEDICAL SHOW 2019<br> 26-28 April 2019-Parade Ground-Chandigarh </h3>
+                               </div>
+
+                               <div class="feature 2019">
+                                <img src="img/iioo.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">IIOO EXPO 2019<br> 3-5 August 2019-Hitex Exhibition Centre-Hyderabad </h3>
+                            </div>
+
+                            <div class="feature 2019">
+                                <img src="img/ophthalmology.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">INDIA OPHTHALMOLOGY EXPO 2019<br> 3-4 August 2019-Hitex Exhibition Centre-Hyderabad </h3>
+                            </div>
+
+                            <div class="feature 2019">
+                                <img src="img/ophthall.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">OPHTHALL 2019<br> 3-4 August 2019-Hitex Exhibition Centre-Hyderabad   </h3>
+                            </div>
+
+                            <div class="feature 2019">
+                                <img src="img/optint.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">OPTINT 2019<br>  3-4 August 2019-Hitex Exhibition Centre-Hyderabad </h3>
+                            </div>
+
+                            <div class="feature 2019">
+                                <img src="img/ettechx.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">ET TECHX EXPO 2019<br> 5-7 December 2019-Hitex Exhibition Centre-Hyderabad </h3>
+                            </div>
+
+                            <div class="feature 2019">
+                                <img src="img/nepallab.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">NEPAL LAB 2019<br> 13-15 December 2019 -Bhrikuti Mandap-Kathmandu</h3>
+                            </div>
+
+                            <div class="feature 2019">
+                                <img src="img/nepal-medical.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">NEPAL MEDICAL SHOW 2019<br> 13-15 December 2019 -Bhrikuti Mandap-Kathmandu </h3>
+                            </div>
+
+                                                                                <!-- 2018-->
+
+                              <div class="feature 2018">
+                                <img src="img/ims.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">BUSINESS OF REFRACTIVE SURGERY MEET<br> </h3>
+                            </div>
+
+                            <div class="feature 2018">
+                                <img src="img/nepallab.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">NEPAL LAB 2018<br> 14-16 December 2018 -Bhrikuti Mandap-Kathmanduu </h3>
+                            </div>
+
+                            <div class="feature 2018">
+                                <img src="img/nepal-medical.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">NEPAL MEDICAL SHOW 2018<br> 14-16 December 2018 -Bhrikuti Mandap-Kathmandu </h3>
+                            </div>
+
+                            <div class="feature 2018">
+                                <img src="img/iioo.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">IIOO EXPO 2018 <br> 18-20 August 2018-Chennai Trade Centre-Chennai </h3>
+                            </div>
+
+                            <div class="feature 2018">
+                                <img src="img/ophthall.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">OPHTHALL 2018<br>18-20 August 2018-Chennai Trade Centre-Chennai </h3>
+                            </div>
+
+                            <div class="feature 2018">
+                                <img src="img/ophthalmology.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">INDIA OPHTHALMOLOGY SHOW 2018<br> 18-20 August 2018-Chennai Trade Centre-Chennai </h3>
+                            </div>
+
+                            <div class="feature 2018">
+                                <img src="img/optint.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">OPT-INT 2018<br> 18-19 August 2018-Chennai Trade Centre-Chennai </h3>
+                            </div>
+
+                            <div class="feature 2018">
+                                <img src="img/KL.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">KENYA LABORUM 2018<br>10-12 May 2018-KICC-Nairobi-Kenya </h3>
+                            </div>
+
+                            <div class="feature 2018">
+                                <img src="img/kms.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">KENYA MEDICAL SHOW 2018<br> 10-12 May 2018-KICC-Nairobi-Kenya </h3>
+                            </div>
+
+                            <div class="feature 2018">
+                                <img src="img/ims.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">INDIA MEDICAL SHOW 2018<br>19-21 April 2018-Parade Ground-Chandigarh</h3>
+                            </div>
+  
+  
+                                                                 <!-- 2017-->
+
+                            <div class="feature 2017">
+                                <img src="img/nepallab.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">NEPAL LAB 2017<br>14-16 December 2017-Bhrikuti Mandap-Kathmandu</h3>
+                            </div>
+
+                            <div class="feature 2017">
+                                <img src="img/nepal-medical.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">NEPAL MEDICAL SHOW 2017<br>14-16 December 2017-Bhrikuti Mandap-Kathmandu</h3>
+                            </div>
+
+                            <div class="feature 2017">
+                                <img src="img/iioo.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">IIOO EXPO 2017<br>4-6 August 2017-Hitex Exhibition Centre-Hyderabad</h3>
+                            </div>
+                                       
+                             
+                                       
+                                                                 <!-- 2016-->
+
+                             <div class="feature 2016">
+                                <img src="img/nepallab.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">NEPAL LAB 2016<br>15-17 December 2016-Bhrikuti Mandap-Kathmandu</h3>
+                            </div>  
+                            
+                            <div class="feature 2016">
+                                <img src="img/nepal-medical.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">NEPAL MEDICAL SHOW 2016<br>15-17 December 2016-Bhrikuti Mandap-Kathmandu</h3>
+                            </div> 
+
+                            <div class="feature 2016">
+                                <img src="img/iioo.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">IIOO EXPO 2016<br>15-17 October 2016-Chennai Trade Centre-Chennai</h3>
+                            </div> 
+
+                            <div class="feature 2016">
+                                <img src="img/srilankalab.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">SRI LANKA LAB EXPO 2016<br>18-20 August 2016-SLECC-Colombo</h3>
+                            </div> 
+
+                            <div class="feature 2016">
+                                <img src="img/srilankamedical.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">SRI LANKA MEDICAL SHOW 2016<br>18-20 August 2016-SLECC-Colombo</h3>
+                            </div> 
+
+                            <div class="feature 2016">
+                                <img src="img/KL.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">KENYA LABORUM 2016<br>18-20 February 2016-Oshwal Centre-Nairobi</h3>
+                            </div> 
+
+                            <div class="feature 2016">
+                                <img src="img/kms.jpg" alt="" class="feature__image"> 
+                            <br> <h3 class="feature__heading">KENYA MEDICAL SHOW 2016<br>18-20 February 2016-Oshwal Centre-Nairobi</h3>
+                            </div> 
+                 </div>
+                            
+                 <script>
+
+
+                 </script>
+
+
+
+
+                     <div class="story__pitcures">
+                        <img src="img/gall-11.jpg" alt="" class="story__img--1">
+                        <img src="img/gall-10.jpg" alt="" class="story__img--2">
+                    </div>
+                    
+                    <div class="story__conteent">
+                       <h2 class="heading-secondary u-margin-bottom-small"> EVENT OVERVIEW</h2>
+                       <h3 class="heading-tertiary u-margin-bottom-small">&ldquo;  CHECK OUT OUR LATEST EVENTS IN MORE DETAIL  &rdquo;</h3>
+                       <p class="paragraph">YOU CAN ALSO CATCH INSIDE GLIMPSE THROUGH PHOTO GALLERY AND POST SHOW REPORT</p>
+                       <!-- <a href="#" class="btn btn--green">Check Out Now</a> -->
+                     </div>
+
+
+<!-- 
+                     <div class="eventOverview">
+
+                        <div class="overview">
+                        <img src="img/iioo.jpg" alt="india med Expo" class="overview__img">
+                        <h5 class="overview__name">India Med Expo</h5>
+                        <a href="indianlabpics.html" target="_blank" > <button class="cta overview__btn--1">Photo gallery</button></a>
+                        <button class="cta overview__btn--2">DOWNLOAD POST SHOW REPORT</button>
+                        </div>
+
+           
+           
+                       <div class="overview">
+                       <img src="img/iioo.jpg" alt="india med Expo" class="overview__img">
+                       <h5 class="overview__name">IIOO Expo</h5>
+                      <a href="optintpics.html" target="_blank" > <button class="cta overview__btn--1">Photo gallery</button></a>
+                       <button class="cta overview__btn--2">DOWNLOAD POST SHOW REPORT</button>
+                       </div>   
+
+
+                       <div class="overview">
+                      <img src="img/iioo.jpg" alt="india med Expo" class="overview__img">
+                      <h5 class="overview__name">India Medical Show</h5>
+                      <a href="indianmedicalpics.html" target="_blank" > <button class="cta overview__btn--1">Photo gallery</button></a>
+                      <button class="cta overview__btn--2">DOWNLOAD POST SHOW REPORT</button>
+                      </div>  -->
+  
+                        <!-- <div class="overview">
+                       <img src="img/iioo.jpg" alt="india med Expo" class="overview__img">
+                       <h5 class="overview__name">Opthhall</h5>
+                       <button class="cta overview__btn--1">Photo gallery</button>
+                       <button class="cta overview__btn--2">DOWNLOAD POST SHOW REPORT</button>
+                       </div>  -->
+
+<!-- 
+                           <div class="overview">
+                           <img src="img/iioo.jpg" alt="india med Expo" class="overview__img">
+                           <h5 class="overview__name">Kenya Laborum</h5>
+                           <button class="cta overview__btn--1">Photo gallery</button>
+                           <button class="cta overview__btn--2">DOWNLOAD POST SHOW REPORT</button>
+                           </div>
+   
+              
+                            <div class="overview">
+                           <img src="img/iioo.jpg" alt="india med Expo" class="overview__img">
+                           <h5 class="overview__name">Nepal Lab</h5>
+                           <button class="cta overview__btn--1">Photo gallery</button>
+                           <button class="cta overview__btn--2">DOWNLOAD POST SHOW REPORT</button>
+                           </div>  -->
+
+
+                <div class="eventOverview">   
+                    
+                    
+                    <div class="overview">
+                        <img src="img/iioo.jpg" alt="" class="overview__img">
+                        <h5 class="overview__name">IIOO</h5>
+                     <button onclick="window.location.href = 'file:///F:/udemy%20work/after-S05/iioopics.html'"  class="overview__btn--1  btn-Event">View Photo gallery</button>
+                     
+                    </div>
+
+
+
+                    
+                    <div class="overview">
+
+                        <img src="img/ophthall.jpg" alt="" class="overview__img">
+                        <h5 class="overview__name">OPHTHALL</h5>
+                        <button onclick="window.location.href = 'file:///F:/udemy%20work/after-S05/opthallpics.html';" class="cta overview__btn--1 btn-Event">View Photo gallery</button>
+                    </div>
+
+
+                    <div class="overview">
+
+                        <img src="img/KL.jpg" alt="" class="overview__img">
+                        <h5 class="overview__name">KENYA LABORUM</h5>
+                        <button onclick="window.location.href = 'file:///F:/udemy%20work/after-S05/kenyapics.html';" class="cta overview__btn--1 btn-Event">View Photo gallery</button>
+
+                    </div>
+
+                    <div class="overview">
+                       
+                        <img src="img/nepallab.jpg" alt="" class="overview__img">
+                        <h5 class="overview__name">NEPAL LAB</h5>
+                        <button onclick="window.location.href = 'file:///F:/udemy%20work/after-S05/optintpics.html';" class="cta overview__btn--1 btn-Event">View Photo gallery</button>
+
+                    </div>
+
+                    <div class="overview">
+                        <img src="img/optint.jpg" alt="" class="overview__img">
+                        <h5 class="overview__name">OPTINT</h5>
+                        <button onclick="window.location.href = 'file:///F:/udemy%20work/after-S05/optintpics.html';" class="cta overview__btn--1 btn-Event">View Photo gallery</button>
+                    </div>
+
+                    <div class="overview">
+
+                        <img src="img/srilankalab.jpg" alt="" class="overview__img">
+                        <h5 class="overview__name">SRI LANKA EXPO</h5>
+                        <button onclick="window.location.href = 'file:///F:/udemy%20work/after-S05/srilankapics.html';" class="cta overview__btn--1 btn-Event">View Photo gallery</button>
+                    </div>
+
+                    <div class="overview">
+
+                        <img src="img/srilankalab.jpg" alt="" class="overview__img">
+                        <h5 class="overview__name">INDIA MEDICAL SHOW</h5>
+                        <button onclick="window.location.href = 'file:///F:/udemy%20work/after-S05/srilankapics.html';" class="cta overview__btn--1 btn-Event">View Photo gallery</button>
+                    </div>
+
+                    
+                    <div class="overview">
+                        <img src="img/srilankalab.jpg" alt="" class="overview__img">
+                        <h5 class="overview__name">INDIA LAB EXPO</h5>
+                        <button onclick="window.location.href = 'file:///F:/udemy%20work/after-S05/srilankapics.html';" class="overview__btn--1 btn-Event">Photo gallery</button>
+                    </div>
+                          
+                    
+                           
+                   </div>
+
+
+
+
+   
+                 <section class="gallery">
+
+                    <figure class="gallery__item gallery__item--1">
+                        <img src="img/optint/1.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+
+                    <figure class="gallery__item gallery__item--2">
+                        <img src="img/gall-2.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+
+                     <figure class="gallery__item gallery__item--3">
+                        <img src="img/gall-3.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+
+                     <figure class="gallery__item gallery__item--4">
+                        <img src="img/gall-4.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+                    
+                     
+                     <figure class="gallery__item gallery__item--5">
+                        <img src="img/gall-5.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+                
+                     
+                     <figure class="gallery__item gallery__item--6">
+                        <img src="img/gall-7.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+
+                     
+                     <figure class="gallery__item gallery__item--7">
+                        <img src="img/gall-6.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+
+                     
+                     <figure class="gallery__item gallery__item--8">
+                        <img src="img/gall-8.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+
+                     
+                     <figure class="gallery__item gallery__item--9">
+                        <img src="img/gall-9.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+
+                     
+                     <figure class="gallery__item gallery__item--10">
+                        <img src="img/gall-10.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+
+                     
+                     <figure class="gallery__item gallery__item--11">
+                        <img src="img/gall-13.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+
+                     
+                     <figure class="gallery__item gallery__item--12">
+                        <img src="img/gal-main.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+
+                     
+                     <figure class="gallery__item gallery__item--13">
+                        <img src="img/gall-11.jpg" alt="Gallery image 1" class="gallery__img">
+                     </figure>
+                </section>
+
+
+
+
+         </div>
+        
+
+        
+        
+        <footer class="footer">
+            <div class="footer__logo-box">
+
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                            media="(max-width: 37.5em)">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">
+                </picture>
+
+
+                
+            </div>
+
+
+            <div class="row">
+                <div class="col-1-of-2">
+                      <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="file:///F:/udemy%20work/after-S05/index.html" class="footer__link">Home</a></li>
+                            <li class="footer__item"><a href="file:///F:/udemy%20work/after-S05/ABOUTUS.HTML" class="footer__link">About US</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link"></a></li>
+                            <li class="footer__item"><a href="file:///F:/udemy%20work/after-S05/events.html" class="footer__link">Events</a></li>
+                            <li class="footer__item"><a href="F:/udemy%20work/after-S05/contactus.html" class="footer__link">Contact US</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright"> 
+                        Built by <a href="#" class="footer__link">Bhavya Anand</a> for       <a href="#" class="footer__link">   SD Promo Media</a>.
+                        <br> Copyright &copy; by  S D Promo Media Pvt. Ltd. - B-820, Noida One IT Park, Sector-62- Noida - 201309 - India
+
+                </div>
+            </div>
+        </footer>
+    </main>
+        
+        
+     </body>
+        
+            
