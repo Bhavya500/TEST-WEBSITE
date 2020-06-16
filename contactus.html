@@ -26,10 +26,10 @@
 
             <nav class="navigation__nav">
                 <ul class="navigation__list">                    
-                    <li class="navigation__item"><a href="index.html" class="navigation__link"><span>01</span>Home</a></li>
-                    <li class="navigation__item"><a href="ABOUTUS.HTML" class="navigation__link"><span>02</span>About Us</a></li>
-                    <li class="navigation__item"><a href="Events.html" class="navigation__link"><span>03</span>Events</a></li>
-                    <li class="navigation__item"><a href="contactus.html" class="navigation__link"><span>04</span>Contact Us</a></li>
+                    <li class="navigation__item"><a href="index.html" class="navigation__link"><span></span>Home</a></li>
+                    <li class="navigation__item"><a href="ABOUTUS.HTML" class="navigation__link"><span></span>About Us</a></li>
+                    <li class="navigation__item"><a href="Events.html" class="navigation__link"><span></span>Events</a></li>
+                    <li class="navigation__item"><a href="contactus.html" class="navigation__link"><span></span>Contact Us</a></li>
                    
                     </ul>
             </nav>
@@ -47,7 +47,7 @@
                     <span class="heading-primary--sub">is where life happens</span>
                 </h1>
 
-                <a href="#" class="btn btn--white btn--animated">Contact US Now</a>
+                <a href="#contact" class="btn btn--white btn--animated">Contact US Now</a>
             </div>
         </header>
 
@@ -104,11 +104,11 @@
                 </div>
             </section>  
 
-            <section class="section-book">
+            <section class="section-book" id="contact">
                 <div class="row">
                     <div class="book">
                         <div class="book__form">
-                            <form action="contactform.php" class="form" method="POST">
+                            <form action="https://formspree.io/bhavyanand500@email.com" class="form" method="POST">
                                 <div class="u-margin-bottom-medium">
                                     <h2 class="heading-secondary">
                                         Contact Us now
@@ -155,16 +155,20 @@
         </main>
 
         
-        <footer class="footer">
+          <footer class="footer">
             <div class="footer__logo-box">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSDPromoMedia%2F&tabs=timeline&width=500&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-                <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
-                <a class="twitter-timeline" data-width="500" data-height="300" data-theme="dark" 
-                href="https://twitter.com/SDPromoMedia?ref_src=twsrc%5Etfw">Tweets by SDPromoMedia</a> 
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              
+
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                            media="(max-width: 37.5em)">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">
+                </picture>
+
+
+                
             </div>
+              
+              
             <div class="row">
                 <div class="col-1-of-2">
 
@@ -174,11 +178,11 @@
                     
                     <div class="footer__navigation">
                         <ul class="footer__list">
-                            <li class="footer__item"><a href="file:///F:/udemy%20work/after-S05/index.html" class="footer__link">Home</a></li>
-                            <li class="footer__item"><a href="file:///F:/udemy%20work/after-S05/ABOUTUS.HTML" class="footer__link">About US</a></li>
+                            <li class="footer__item"><a href="index.html" class="footer__link">Home</a></li>
+                            <li class="footer__item"><a href="ABOUTUS.HTML" class="footer__link">About US</a></li>
                             <li class="footer__item"><a href="#" class="footer__link"></a></li>
-                            <li class="footer__item"><a href="file:///F:/udemy%20work/after-S05/events.html" class="footer__link">Events</a></li>
-                            <li class="footer__item"><a href="F:/udemy%20work/after-S05/contactus.html" class="footer__link">Contact US</a></li>
+                            <li class="footer__item"><a href="events.html" class="footer__link">Events</a></li>
+                            <li class="footer__item"><a href="contactus.html" class="footer__link">Contact US</a></li>
                         </ul>
                     </div>
                 </div>
